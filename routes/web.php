@@ -2,9 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-route::get('/app', function () {
-    return view('layouts.app');
-});
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
+Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.about");
